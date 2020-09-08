@@ -3,13 +3,12 @@ import java.util.Scanner;
 public class App {
     public static void main(String [] args){
         Scanner myObj = new Scanner(System.in);
-        int number = myObj.nextInt();
-        int sum = 0;
+        String str = myObj.nextLine();
 
-        for (int i = 0; i < number; i++) {
-            sum += i;
-        }
+        int number1 = Character.getNumericValue(str.charAt(0));
+        int number2 = Character.getNumericValue(str.charAt(1));
+        int number3 = Character.getNumericValue(str.charAt(2));
 
-        System.out.println(sum);
+        System.out.println(number1+number2+number3);
     }
 }

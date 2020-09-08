@@ -6,21 +6,17 @@ public class App {
         int number = myObj.nextInt();
         String name_number;
 
-        if (number>0) {
-            if (number%2==0) {
-                name_number = "положительное четное число";
-            }
-            else {
-                name_number = "положительное нечетное число";
-            }
+        if ((number>0) & (number%2==0)) {
+            name_number = "положительное четное число";
         }
-        else if (number<0) {
-            if (number%2==0) {
-                name_number = "отрицательное четное число";
-            }
-            else {
-                name_number = "отрицательное нечетное число";
-            }
+        else if ((number>0) & (number%2!=0)) {
+            name_number = "положительное нечетное число";
+        }
+        else if ((number<0) & (number%2==0)) {
+            name_number = "отрицательное четное число";
+        }
+        else if ((number<0) & (number%2!=0)) {
+            name_number = "отрицательное нечетное число";
         }
         else {
             name_number = "нулевое число";
