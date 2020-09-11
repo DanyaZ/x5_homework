@@ -1,21 +1,17 @@
 import java.util.Scanner;
 
 public class App {
-    public static void main(String [] args){
+    public static void main(String[] args) {
+        System.out.println("Введите числа через пробел!");
         Scanner myObj = new Scanner(System.in);
-        int number1 = myObj.nextInt();
-        int number2 = myObj.nextInt();
-        int number3 = myObj.nextInt();
-        int max_number;
-
-        if (((number1>number2) && (number1>number3)) || ((number1==number2) && (number1>number3))) {
-            max_number = number1;
-        }
-        else if (((number2>number1) && (number2>number3)) || ((number2==number3) && (number2>number1))) {
-            max_number = number2;
-        }
-        else {
-            max_number = number3;
+        String number = myObj.nextLine();
+        String str[] = number.split(" ");
+        int max_number = Integer.parseInt(str[0]);
+        
+        for (String s : str) {
+            if (Integer.parseInt(s) > max_number) {
+                max_number = Integer.parseInt(s);
+            }
         }
 
         System.out.println(max_number);

@@ -1,7 +1,7 @@
 public class App {
-    public static void main(String [] args){
+    public static void main(String[] args) {
 
-        int[] intArray = {1,-10,5,6,45,23,-45,-34,0,32,56,-1,2,-2};
+        int[] intArray = {1, -10, 5, 6, 45, 23, -45, -34, 0, 32, 56, -1, 2, -2};
         MaxNumber(intArray);
         SumPositiveNumber(intArray);
         SumNegativeNumber(intArray);
@@ -11,8 +11,8 @@ public class App {
 
     private static void MaxNumber(int[] intArray) {
         int maxEl = intArray[0];
-        for (int i:intArray) {
-            if (i>maxEl) {
+        for (int i : intArray) {
+            if (i > maxEl) {
                 maxEl = i;
             }
         }
@@ -20,9 +20,9 @@ public class App {
     }
 
     private static void SumPositiveNumber(int[] intArray) {
-        int SumNumber= 0;
-        for (int i:intArray) {
-            if (i>0) {
+        int SumNumber = 0;
+        for (int i : intArray) {
+            if (i > 0) {
                 SumNumber += i;
             }
         }
@@ -30,9 +30,9 @@ public class App {
     }
 
     private static void SumNegativeNumber(int[] intArray) {
-        int SumNumber= 0;
-        for (int i:intArray) {
-            if ((i<0) && (i%2==0)) {
+        int SumNumber = 0;
+        for (int i : intArray) {
+            if ((i < 0) && (i % 2 == 0)) {
                 SumNumber += i;
             }
         }
@@ -40,9 +40,9 @@ public class App {
     }
 
     private static void CountPositiveNumber(int[] intArray) {
-        int CountNumber= 0;
-        for (int i:intArray) {
-            if (i>0) {
+        int CountNumber = 0;
+        for (int i : intArray) {
+            if (i > 0) {
                 CountNumber++;
             }
         }
@@ -50,15 +50,15 @@ public class App {
     }
 
     private static void AveragePositiveNumber(int[] intArray) {
-        int SumNumber= 0;
-        int CountNumber= 0;
-        for (int i:intArray) {
-            if (i<0) {
+        int SumNumber = 0;
+        int CountNumber = 0;
+        for (int i : intArray) {
+            if (i < 0) {
                 CountNumber++;
                 SumNumber += i;
             }
         }
-        double Average = (SumNumber*1.0)/(CountNumber*1.0);
+        double Average = (SumNumber * 1.0) / (CountNumber * 1.0);
         System.out.println(Average);
     }
 }

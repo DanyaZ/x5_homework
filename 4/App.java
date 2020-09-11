@@ -1,17 +1,15 @@
 import java.util.Scanner;
 
 public class App {
-    public static void main(String [] args){
+    public static void main(String[] args) {
         Scanner myObj = new Scanner(System.in);
         int number = myObj.nextInt();
 
-        if (number  > 0 ) {
+        if (number > 0) {
             number++;
-        }
-        else if (number < 0) {
+        } else if (number < 0) {
             number -= 2;
-        }
-        else {
+        } else {
             number = 10;
         }
 
